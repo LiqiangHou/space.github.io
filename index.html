@@ -3,160 +3,304 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liqiang Hou (Dr.Who) — Projects</title>
+<title>Liqiang Hou (Dr. Who) — Research & Projects</title>
+<meta name="description" content="Research portfolio of Liqiang Hou (Dr. Who) — Research Professor, Ph.D., Shanghai Jiao Tong University.">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/68376937?v=4">
 <style>
   :root {
     --bg: #0d1117;
+    --bg-alt: #010409;
     --card: #161b22;
     --border: #30363d;
     --text: #c9d1d9;
+    --text-bright: #f0f6fc;
     --accent: #58a6ff;
+    --accent2: #7ee787;
     --muted: #8b949e;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
+    line-height: 1.5;
   }
-  header {
-    padding: 60px 20px 30px;
-    text-align: center;
+  a { color: var(--accent); }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px;
+    background: rgba(13,17,23,0.85);
+    backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--border);
   }
-  header img {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    border: 2px solid var(--border);
-  }
-  header h1 {
-    margin: 16px 0 4px;
-    font-size: 2em;
-  }
-  header p {
-    color: var(--muted);
-    margin: 0;
-  }
-  header a.gh-link {
-    display: inline-block;
-    margin-top: 12px;
-    color: var(--accent);
+  nav .brand { font-weight: 600; color: var(--text-bright); text-decoration: none; }
+  nav .links a {
+    margin-left: 22px;
     text-decoration: none;
+    color: var(--muted);
+    font-size: 0.92em;
   }
+  nav .links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    background: radial-gradient(circle at 30% 20%, #1b2733 0%, var(--bg-alt) 70%);
+    text-align: center;
+    padding: 80px 20px 60px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 30px rgba(88,166,255,0.35);
+  }
+  .hero h1 {
+    margin: 22px 0 6px;
+    font-size: 2.3em;
+    color: var(--text-bright);
+  }
+  .hero .tagline {
+    color: var(--accent2);
+    font-size: 1.05em;
+    margin: 0 0 6px;
+  }
+  .hero .role {
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+  .hero .cta {
+    display: inline-flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9em;
+    border: 1px solid var(--border);
+  }
+  .btn.primary { background: var(--accent); color: #0d1117; font-weight: 600; border-color: var(--accent); }
+  .btn.secondary { color: var(--text); }
+  .btn:hover { opacity: 0.85; }
+
+  /* MAIN */
   main {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
   h2.section-title {
-    font-size: 1.3em;
+    font-size: 1.4em;
+    color: var(--text-bright);
     border-bottom: 1px solid var(--border);
-    padding-bottom: 8px;
-    margin-bottom: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 26px;
   }
+  #status {
+    color: var(--muted);
+    font-size: 0.9em;
+    margin-bottom: 16px;
+  }
+
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
   }
   .card {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
-    transition: border-color 0.2s ease;
+    transition: transform 0.15s ease, border-color 0.15s ease;
   }
   .card:hover {
     border-color: var(--accent);
+    transform: translateY(-3px);
   }
-  .card h3 {
-    margin: 0 0 8px;
-    font-size: 1.1em;
-  }
-  .card h3 a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  .card h3 a:hover {
-    text-decoration: underline;
-  }
+  .card h3 { margin: 0 0 8px; font-size: 1.12em; }
+  .card h3 a { text-decoration: none; color: var(--accent); }
+  .card h3 a:hover { text-decoration: underline; }
   .card p.desc {
     color: var(--text);
-    font-size: 0.92em;
+    font-size: 0.93em;
     flex-grow: 1;
-    margin: 0 0 16px;
+    margin: 0 0 14px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .tag {
+    font-size: 0.75em;
+    background: rgba(88,166,255,0.12);
+    color: var(--accent);
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid rgba(88,166,255,0.35);
   }
   .meta {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     font-size: 0.82em;
     color: var(--muted);
+    flex-wrap: wrap;
   }
   .lang-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 4px;
+    width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px;
   }
+
   footer {
     text-align: center;
-    padding: 30px 20px;
+    padding: 34px 20px;
     color: var(--muted);
     font-size: 0.85em;
     border-top: 1px solid var(--border);
   }
-  footer a { color: var(--accent); text-decoration: none; }
 </style>
 </head>
 <body>
 
-<header>
+<nav>
+  <a class="brand" href="#top">Dr. Who — Liqiang Hou</a>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="https://github.com/LiqiangHou" target="_blank">GitHub</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
   <img src="https://avatars.githubusercontent.com/u/68376937?v=4" alt="Liqiang Hou avatar">
   <h1>Liqiang Hou (Dr. Who)</h1>
-  <p>Research Professor, Ph.D. — Shanghai Jiao Tong University</p>
-  <a class="gh-link" href="https://github.com/LiqiangHou" target="_blank">github.com/LiqiangHou</a>
+  <p class="tagline">Optimization · Trajectory Design · Applied Mathematics</p>
+  <p class="role">Research Professor, Ph.D. — Shanghai Jiao Tong University</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">View Projects</a>
+    <a class="btn secondary" href="https://github.com/LiqiangHou" target="_blank">GitHub Profile</a>
+  </div>
 </header>
 
 <main>
-  <h2 class="section-title">Repositories</h2>
-  <div class="grid">
+  <section id="about">
+    <h2 class="section-title">About</h2>
+    <p>
+      I work on continuous optimization methods, orbital mechanics / electromagnetic transfer problems,
+      and mixed-integer formulations for combinatorial problems such as the Traveling Salesman Problem (TSP).
+      My repositories collect research code, solvers, and supporting tools developed as part of ongoing
+      academic work at Shanghai Jiao Tong University.
+    </p>
+  </section>
 
-    <div class="card">
-      <h3><a href="https://github.com/LiqiangHou/EM-transfer-STM-low-fidelity-costate" target="_blank">EM-transfer-STM-low-fidelity-costate</a></h3>
-      <p class="desc">Research code repository.</p>
-      <div class="meta"><span>⭐ Public</span></div>
-    </div>
-
-    <div class="card">
-      <h3><a href="https://github.com/LiqiangHou/Dr.Who.Liqiang.github.io" target="_blank">Dr.Who.Liqiang.github.io</a></h3>
-      <p class="desc">Personal HTML site project.</p>
-      <div class="meta"><span class="lang-dot" style="background:#e34c26;"></span>HTML</div>
-    </div>
-
-    <div class="card">
-      <h3><a href="https://github.com/LiqiangHou/TSP---Continuous---LSE---Solver" target="_blank">TSP - Continuous - LSE - Solver</a></h3>
-      <p class="desc">MATLAB code for mixed-integer TSP construction using a continuous-based expression and estimate-correct mechanism.</p>
-      <div class="meta"><span class="lang-dot" style="background:#e16737;"></span>MATLAB</div>
-    </div>
-
-    <div class="card">
-      <h3><a href="https://github.com/LiqiangHou/space.github.io" target="_blank">space.github.io</a></h3>
-      <p class="desc">This site — a portfolio of all my repositories, hosted via GitHub Pages.</p>
-      <div class="meta"><span>GitHub Pages</span></div>
-    </div>
-
-  </div>
+  <section id="projects" style="margin-top:50px;">
+    <h2 class="section-title">Repositories</h2>
+    <div id="status">Loading repositories from GitHub…</div>
+    <div class="grid" id="repo-grid"></div>
+  </section>
 </main>
 
 <footer>
-  Built with GitHub Pages · <a href="https://github.com/LiqiangHou" target="_blank">View GitHub Profile</a>
+  Built with GitHub Pages · Data loaded live via the GitHub REST API ·
+  <a href="https://github.com/LiqiangHou" target="_blank">github.com/LiqiangHou</a>
 </footer>
+
+<script>
+const USERNAME = "LiqiangHou";
+
+// Manual overrides: description / tags for repos where GitHub metadata is sparse.
+const OVERRIDES = {
+  "EM-transfer-STM-low-fidelity-costate": {
+    description: "Research code for electromagnetic (EM) orbital transfer using State Transition Matrix (STM) methods with low-fidelity costate estimation.",
+    tags: ["Orbital Mechanics", "Costate Estimation", "Research"]
+  },
+  "Dr.Who.Liqiang.github.io": {
+    description: "Personal HTML site project and experimentation space for web-based presentations.",
+    tags: ["HTML", "Personal Site"]
+  },
+  "TSP---Continuous---LSE---Solver": {
+    description: "MATLAB code for mixed-integer TSP construction using a continuous-based expression and an estimate-correct mechanism.",
+    tags: ["MATLAB", "TSP", "Optimization", "Mixed-Integer"]
+  },
+  "space.github.io": {
+    description: "This site — a live portfolio of all repositories, automatically loaded from the GitHub API and hosted via GitHub Pages.",
+    tags: ["GitHub Pages", "Portfolio"]
+  }
+};
+
+const LANG_COLORS = {
+  MATLAB: "#e16737",
+  HTML: "#e34c26",
+  Python: "#3572A5",
+  JavaScript: "#f1e05a",
+  TypeScript: "#3178c6",
+  CSS: "#563d7c",
+  "C++": "#f34b7d",
+  Java: "#b07219"
+};
+
+function timeAgo(dateStr) {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const days = Math.floor(diff / 86400000);
+  if (days < 1) return "today";
+  if (days < 30) return days + "d ago";
+  const months = Math.floor(days / 30);
+  if (months < 12) return months + "mo ago";
+  return Math.floor(months / 12) + "y ago";
+}
+
+async function loadRepos() {
+  const grid = document.getElementById("repo-grid");
+  const status = document.getElementById("status");
+  try {
+    const res = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100`);
+    if (!res.ok) throw new Error("GitHub API error " + res.status);
+    const repos = await res.json();
+    const visible = repos.filter(r => !r.fork);
+
+    status.textContent = `${visible.length} public repositories · updated live from GitHub`;
+    grid.innerHTML = "";
+
+    visible.forEach(repo => {
+      const override = OVERRIDES[repo.name] || {};
+      const description = override.description || repo.description || "No description provided.";
+      const tags = override.tags || repo.topics || [];
+      const langColor = LANG_COLORS[repo.language] || "#8b949e";
+
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+        <p class="desc">${description}</p>
+        ${tags.length ? `<div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>` : ""}
+        <div class="meta">
+          ${repo.language ? `<span><span class="lang-dot" style="background:${langColor};"></span>${repo.language}</span>` : ""}
+          <span>★ ${repo.stargazers_count}</span>
+          <span>Updated ${timeAgo(repo.pushed_at)}</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  } catch (err) {
+    status.textContent = "Could not load repositories from GitHub API (rate limit or network issue).";
+    console.error(err);
+  }
+}
+
+loadRepos();
+</script>
 
 </body>
 </html>
