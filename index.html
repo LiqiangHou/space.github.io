@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liqiang Hou (Dr.Who) — Projects</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --accent: #58a6ff;
+    --muted: #8b949e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 60px 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  header img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+  }
+  header h1 {
+    margin: 16px 0 4px;
+    font-size: 2em;
+  }
+  header p {
+    color: var(--muted);
+    margin: 0;
+  }
+  header a.gh-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  h2.section-title {
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease;
+  }
+  .card:hover {
+    border-color: var(--accent);
+  }
+  .card h3 {
+    margin: 0 0 8px;
+    font-size: 1.1em;
+  }
+  .card h3 a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card h3 a:hover {
+    text-decoration: underline;
+  }
+  .card p.desc {
+    color: var(--text);
+    font-size: 0.92em;
+    flex-grow: 1;
+    margin: 0 0 16px;
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.82em;
+    color: var(--muted);
+  }
+  .lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+    font-size: 0.85em;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://avatars.githubusercontent.com/u/68376937?v=4" alt="Liqiang Hou avatar">
+  <h1>Liqiang Hou (Dr. Who)</h1>
+  <p>Research Professor, Ph.D. — Shanghai Jiao Tong University</p>
+  <a class="gh-link" href="https://github.com/LiqiangHou" target="_blank">github.com/LiqiangHou</a>
+</header>
+
+<main>
+  <h2 class="section-title">Repositories</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3><a href="https://github.com/LiqiangHou/EM-transfer-STM-low-fidelity-costate" target="_blank">EM-transfer-STM-low-fidelity-costate</a></h3>
+      <p class="desc">Research code repository.</p>
+      <div class="meta"><span>⭐ Public</span></div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/LiqiangHou/Dr.Who.Liqiang.github.io" target="_blank">Dr.Who.Liqiang.github.io</a></h3>
+      <p class="desc">Personal HTML site project.</p>
+      <div class="meta"><span class="lang-dot" style="background:#e34c26;"></span>HTML</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/LiqiangHou/TSP---Continuous---LSE---Solver" target="_blank">TSP - Continuous - LSE - Solver</a></h3>
+      <p class="desc">MATLAB code for mixed-integer TSP construction using a continuous-based expression and estimate-correct mechanism.</p>
+      <div class="meta"><span class="lang-dot" style="background:#e16737;"></span>MATLAB</div>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://github.com/LiqiangHou/space.github.io" target="_blank">space.github.io</a></h3>
+      <p class="desc">This site — a portfolio of all my repositories, hosted via GitHub Pages.</p>
+      <div class="meta"><span>GitHub Pages</span></div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  Built with GitHub Pages · <a href="https://github.com/LiqiangHou" target="_blank">View GitHub Profile</a>
+</footer>
+
+</body>
+</html>
